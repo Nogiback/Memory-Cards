@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400;700&display=swap');
+
+$shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+$darkershadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+$card: rgb(26, 31, 39);
+$clear: rgba(0, 0, 0, 0); 
+$black: rgb(34, 40, 49);
+$grey: rgb(57, 62, 70);
+$lightgrey: rgb(225, 223, 223);
+$lightergrey: rgb(240, 240, 240);
+$primary-font: 'Urbanist', sans-serif;
+$font-weights: (
+  "light": 200,
+  "regular": 400,
+  "bold": 700
+);
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@mixin flex($direction, $alignment, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $alignment;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  font: inherit;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $primary-font;
+  background-color: $black;
+  color: $lightgrey;
+  line-height: 1.6;
+}
