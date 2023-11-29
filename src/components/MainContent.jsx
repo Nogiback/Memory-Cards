@@ -6,14 +6,14 @@ import Scoreboard from './Gameboard/Scoreboard';
 import Modal from './Gameboard/Modal';
 
 export default function MainContent() {
-  const [count, setCount] = useState(4);
+  const [count, setCount] = useState(12);
   const [pokemon, setPokemon] = useState([]);
   const [highScore, setHighScore] = useState(0);
   const [roundScore, setRoundScore] = useState(0);
   const [clickedPokemon, setClickedPokemon] = useState([]);
   const [gameOver, setGameOver] = useState(false);
   const [roundOver, setRoundOver] = useState(false);
-  const [round, setRound] = useState(1);
+  const [round, setRound] = useState(5);
   const [totalScore, setTotalScore] = useState(0);
 
   useEffect(() => {
@@ -60,14 +60,15 @@ export default function MainContent() {
   }
 
   function resetGame() {
+    setPokemon([])
     setCount(4);
     setRoundOver(false);
     setGameOver(false);
     setClickedPokemon([]);
     setRoundScore(0);
     setTotalScore(0);
-    setRound(1);
     round > 5 ? setHighScore(0) : null;
+    setRound(1);
   }
 
   return (
