@@ -60,14 +60,18 @@ export default function MainContent() {
   }
 
   function resetGame() {
-    setPokemon([])
+    if (count !== 4) {
+      setPokemon([]);
+    }
+    if (round > 5) {
+      setHighScore(0);
+    }
     setCount(4);
+    setClickedPokemon([]);
     setRoundOver(false);
     setGameOver(false);
-    setClickedPokemon([]);
     setRoundScore(0);
     setTotalScore(0);
-    round > 5 ? setHighScore(0) : null;
     setRound(1);
   }
 
