@@ -4,16 +4,23 @@
   font-size: 2rem;
   margin: 0 2rem;
   margin-top: 3rem;
+}
 
-  p {
-    background-color: $yellow;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: $darkershadow;
-    width: 210px;
-    text-align: center;
-  }
+.score {
+  background-color: $yellow;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: $darkershadow;
+  width: 220px;
+  text-align: center;
+}
 
+#info {
+  background-color: $yellow;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: $darkershadow;
+  text-align: center;
 }
 
 #info-btn {
@@ -37,10 +44,9 @@
   .scoreboard {
     gap: 1rem;
     font-size: 1.5rem;
-
-    p {
-      width: 160px;
-    }
+  }
+  .score {
+    width: 180px;
   }
 
   .scores {
