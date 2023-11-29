@@ -1,0 +1,54 @@
+.pokemon-container {
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 5rem;
+  max-width: 1200px;
+}
+
+.pokemon-card {
+  @include flex(column, center, center);
+  background-color: $yellow;
+  padding: 1rem;
+  font-size: 1.3rem;
+  text-shadow: $shadow;
+  border-radius: 10px;
+  box-shadow: $darkershadow;
+  position: relative;
+  cursor: pointer;
+  
+  img {
+    width: 150px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 60px 1px $yellow;
+  }
+
+  &:active {
+    top: -2px;
+  }
+}
+
+#loading-message {
+  @include flex(column, center, center);
+  color: $yellow;
+  font-size: 5rem;
+  padding-top: 8rem;
+}
+
+@media only screen and (max-width: 450px){
+  .pokemon-container {
+    max-width: 400px;
+  }
+
+  .pokemon-card {
+    padding: 1rem;
+    font-size: 1rem;
+    
+    img {
+      width: 100px;
+    }
+  }
+  
+}

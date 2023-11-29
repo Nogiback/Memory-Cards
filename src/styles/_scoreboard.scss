@@ -1,0 +1,60 @@
+.scoreboard {
+  @include flex(row, center, center);
+  gap: 2rem;
+  font-size: 2rem;
+  margin: 0 2rem;
+  margin-top: 3rem;
+
+  p {
+    background-color: $yellow;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: $darkershadow;
+    width: 210px;
+    text-align: center;
+  }
+
+}
+
+#info-btn {
+  background: none;
+  color: $yellow;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 10px;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.scores {
+  @include flex(row, center, center);
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 575px){
+  .scoreboard {
+    gap: 1rem;
+    font-size: 1.5rem;
+
+    p {
+      width: 160px;
+    }
+  }
+
+  .scores {
+    gap: 1rem;
+  }
+
+  .info-message {
+    font-size: 1.5rem;
+    max-width: 350px;
+  }
+}
+
+@media only screen and (max-width: 450px){
+  .scores {
+    @include flex(column, center, center);
+  }
+}

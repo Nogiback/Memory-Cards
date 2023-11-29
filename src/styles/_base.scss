@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 $shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 $darkershadow: 0 3px 6px rgba(0, 0, 0, 0.6);
-$card: rgb(26, 31, 39);
+$card: rgb(10, 10, 10);
 $clear: rgba(0, 0, 0, 0); 
-$black: rgb(34, 40, 49);
+$black: rgb(35, 35, 35);
+$red: rgb(220, 10, 45);
+$blue: rgb(40, 170, 253);
+$darkblue: rgb(0, 73, 149);
+$yellow: rgb(255, 204, 2);
 $grey: rgb(57, 62, 70);
 $lightgrey: rgb(225, 223, 223);
 $lightergrey: rgb(240, 240, 240);
-$primary-font: 'Urbanist', sans-serif;
+$primary-font: 'VT323', monospace;
 $font-weights: (
   "light": 200,
   "regular": 400,
@@ -41,7 +45,53 @@ $font-weights: (
 
 body {
   font-family: $primary-font;
-  background-color: $black;
-  color: $lightgrey;
+  background-color: $darkblue;
+  color: $black;
   line-height: 1.6;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
+header {
+  @include flex(column, center, center);
+  font-weight: weight(bold);
+  color: $lightgrey;
+  padding: 10px;
+  background-color: $red;
+  text-shadow: $darkershadow;
+  box-shadow: $darkershadow;
+
+  #main-logo {
+    width: 250px;
+  }
+
+  #game-logo {
+    width: 200px; 
+    margin-left: 15px;
+  }
+}
+
+.main {
+  @include flex(column, center, center);
+  gap: 4rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  @include flex(row, center, center);
+  gap: 10px;
+  max-height: 48px;
+  padding: 10px 0px;
+  font-size: 1.1rem;
+  background: $red;
+  color: $yellow;
+
+    i {
+      color: $blue;
+    }
 }
